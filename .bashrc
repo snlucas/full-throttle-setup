@@ -261,3 +261,7 @@ sf-retrieve() {
 sf-object-describe() {
   sf sobject describe --sobject "$1" --target-org "$2"
 }
+
+sf-org-login() {
+  sfdx force:auth:web:login -a $1 -r https://test.salesforce.com
+}
