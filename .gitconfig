@@ -1,0 +1,6 @@
+[user]
+	name = snlucas
+	email = lucas.lambda.101@gmail.com
+
+[alias]
+  mybranches = "!f() { author=${1:-snlucas}; git for-each-ref --format '%(authorname)%09%(refname:short)' | grep \"$author\"; }; f"
