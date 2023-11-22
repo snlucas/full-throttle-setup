@@ -246,16 +246,12 @@ sf-deploy-preview() {
 
 alias sfcd="sf deploy metadata cancel"
 
-sf-deploy() {
-  sf project deploy start --metadata "$1" --target-org "$2"
-}
-
-sf-retrieve-preview() {
-  sf project retrieve preview -o "$1" --target-org "$2"
-}
-
 sf-retrieve() {
-  sf project retrieve start --metadata "$1" --target-org "$2"
+  sfdx force:source:retrieve -m "$1"
+}
+
+sf-deploy() {
+  sfdx force:source:deploy -m "$1"
 }
 
 sf-object-describe() {
